@@ -2,11 +2,11 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 let Character = new Schema({
-  displayName: String,
-  description: String,
-  developerName: String,
-  fullPortrait: String
-  
+  displayName: { type: String },
+  description: { type: String },
+  developerName: { type: String },
+  fullPortrait: { type: String },
+
 })
 
 export default mongoose.model('characters', Character)
