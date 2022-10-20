@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/luisdaniel0/json-api#readme",
   "dependencies": {
+    "chalk": "^5.1.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "fetch": "^1.1.0",
+    "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
     "node-fetch": "^3.2.10"
   },
