@@ -1,12 +1,12 @@
-import { Router } from "express"
-import * as controllers from "../controllers/character.js"
+import { Router } from "express";
+import * as controllers from "../controllers/characters.js";
 
-const router = Router()
+const router = Router();
 
-router.get("/", controllers.getCharacters)
-router.get("/:id", controllers.getCharacter)
-router.post("/",controllers.createCharacter)
-router.put("/:id",controllers.updateCharacter)
-router.delete("/:id", controllers.deleteCharacter)
+router.get("/valorant", controllers.getCharacters)
+router.get("/valorant/:id", controllers.getCharacter)
+router.post("/valorant", controllers.createCharacter)
+router.put("/valorant/:id", controllers.updateCharacter)
+router.delete("/valorant/:id", controllers.deleteCharacter)
 
 export default router;

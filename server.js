@@ -4,16 +4,15 @@ import routes from "./routes/index.js"
 import cors from "cors"
 import logger from "morgan"
 import chalk from "chalk"
-import mongoose from "mongoose"
 
 const app = express();
 const PORT = 3000;
 
-app.use(express.json())
-app.use(cors())
-app.use(logger("dev"))
+app.use(express.json());
+app.use(cors());
+app.use(logger("dev"));
 
-app.use("/".routes);
+app.use("/", routes);
 
 connection.on("connected", () => {
   console.clear();

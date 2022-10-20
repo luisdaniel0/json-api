@@ -1,6 +1,6 @@
 import Character from "../models/Characters.js"
 
-const getCharacters = async (req, res) => {
+export const getCharacters = async (req, res) => {
   try {
     const characters = await Character.find();
     res.json(characters)
@@ -13,15 +13,15 @@ const getCharacters = async (req, res) => {
 export const getCharacter = async (req, res) => {
   try {
     const { id } = req.params;
-    const house = await Character.findById(id)
+    const character = await Character.findById(id)
 
-    if (house) {
+    if (character) {
       return res.json(character)
     }
 
     res.status(404).json({ message: "character not found!" })
   } catch (error) {
-    
+
   }
 };
 
@@ -49,7 +49,7 @@ export const updateCharacter = async (req, res) => {
 
 export const deleteCharacter = async (req, res) => {
   try {
-    const { id }= req.params;
+    const { id } = req.params;
     const deleted = await Character.findByIdAndDelete(id);
 
     if (deleted) {
