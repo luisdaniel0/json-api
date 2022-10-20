@@ -29,7 +29,7 @@ export const createCharacter = async (req, res) => {
   try {
     const character = new Character(req.body)
     await character.save();
-    res.status(201).json(house);
+    res.status(201).json(character);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

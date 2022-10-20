@@ -8,7 +8,7 @@ const insertData = async () => {
 
 
   //insert data
-  await Characters.create(characters)
+  await Characters.create(characters);
 
 
   //close db connection
