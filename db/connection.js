@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import chalk from "chalk";
 
 mongoose.set("returnOriginal", false);
-const connectionString = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/valorant-api"
+const connectionString = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/valorant-api"
 
 mongoose
   .connect(connectionString)
