@@ -3,9 +3,10 @@ import mongoose from "mongoose";
 import chalk from "chalk";
 
 mongoose.set("returnOriginal", false);
+const connectionString = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/valorant-api"
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/valorant-api")
+  .connect(connectionString, "mongodb://127.0.0.1:27017/valorant-api")
   .catch((err) => {
     console.log(`Error connection go MongoDB: ${err.message}`);
   });
