@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import connection from "../db/connection.js"
+import db from "../db/connection.js"
 import Character from "../models/Characters.js"
 import characterJsonData from './characters.json' assert { type: 'json'}
 
