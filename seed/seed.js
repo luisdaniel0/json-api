@@ -13,7 +13,7 @@ let characterData = characterJsonData.data.map(item => {
 })
 
 async function insertData() {
-  await Character.deleteMany({});
+  await db.dropDatabase();
   await Character.create(characterData)
   console.log(`you have inserted ${characterData.length} Characters into the database!`)
 
