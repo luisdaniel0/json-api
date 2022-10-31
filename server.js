@@ -8,8 +8,7 @@ import chalk from "chalk"
 
 const port = process.env.PORT || 3000
 const app = express();
-const PORT = 3000;
-  
+
 app.use(express.json());
 app.use(cors());
 app.use(logger("dev"));
@@ -19,7 +18,7 @@ app.use("/", routes);
 connection.on("connected", () => {
   console.clear();
   console.log(chalk.blue("connected to mongoDB"));
-  app.listen(PORT, () => {
+  app.listen(port, () => {
     console.log(`express server is running! ${port}`)
   })
 })
