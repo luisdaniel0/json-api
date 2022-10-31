@@ -19,7 +19,7 @@ app.use("/", routes);
 connection.on("connected", () => {
   console.clear();
   console.log(chalk.blue("connected to mongoDB"));
-  app.listen(PORT, () => {
+  app.listen(port, () => {
     console.log(`express server is running! ${port}`)
   })
 })
